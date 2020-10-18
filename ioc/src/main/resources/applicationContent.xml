@@ -15,6 +15,6 @@
 <!--        <property name="userDao" ref="userDao"></property>-->
 <!--    </bean>-->
 <!--    <bean id="userService" class="heima.servie.impl.UserServiceImpl" p:userDao-ref="userDao"></bean>-->
-        <content:property-placeholder location="classpath:jdbc.properties" />
-        <import resource="applicationContent-user.xml" />
+<!--        <content:property-placeholder location="classpath:jdbc.properties" />-->
+<!--        <import resource="applicationContent-user.xml" />-->
 </beans>

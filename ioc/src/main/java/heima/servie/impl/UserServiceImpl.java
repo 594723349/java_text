@@ -7,6 +7,8 @@ import heima.servie.UserService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 
 @Service("userService")
@@ -28,5 +30,13 @@ public class UserServiceImpl implements UserService {
         System.out.println("UserServiceImpl创建");
         System.out.println(driver);
         userDao.save();
+    }
+    @PostConstruct
+    public void init() {
+        System.out.println("bea初始化");
+    }
+    @PreDestroy
+    public void destorys() {
+        System.out.println("bean销毁");
     }
 }
